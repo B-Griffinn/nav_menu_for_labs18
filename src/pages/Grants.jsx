@@ -5,7 +5,8 @@ class Grants extends React.Component {
     render() {
 
     return (
-        <div>Grants</div>
+        <div>
+        Grants</div>
     )
   }
 }

@@ -10,7 +10,7 @@ import Signup from './pages/Signup';
 import ResponsiveNavigation from './components/ResponsiveNavigation';
 
 import './App.css';
-import logo from './logo.svg';
+import logo from './img.png';
 
 function App() {
 
