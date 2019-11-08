@@ -1,11 +1,12 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
-import About from './pages/About';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
+import Grants from './pages/Grants';
+import About from './pages/Grants';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+
 import ResponsiveNavigation from './components/ResponsiveNavigation';
 
 import './App.css';
@@ -14,29 +15,30 @@ import logo from './logo.svg';
 function App() {
 
   const navLinks = [
-		{
+	  	{
 			text: 'Home',
-			path: '/',
-			icon: 'ion-ios-home'
-		},
-		{
-			text: 'Contact',
-			path: '/contact',
+			path: '/home',
 			icon: 'ion-ios-megaphone'
 		},
+		{
+			text: 'Grants',
+			path: '/grants',
+			icon: 'ion-ios-home'
+		},
+		
 		{
 			text: 'About',
 			path: '/about',
 			icon: 'ion-ios-business'
 		},
 		{
-			text: 'Blog',
-			path: '/blog',
+			text: 'Login',
+			path: '/login',
 			icon: 'ion-ios-bonfire'
 		},
 		{
-			text: 'Portfolio',
-			path: '/portfolio',
+			text: 'Signup',
+			path: '/signup',
 			icon: 'ion-ios-briefcase'
 		}
 	]
@@ -49,11 +51,11 @@ function App() {
 		logo={ logo }
       />
       <Router>
-        <About path="/about" />
-        <Blog path="/blog" />
-        <Contact path="/contact" />
-        <Home path="/home" />
-        <Portfolio path="/portfolio" />
+		<Home path="/home" />
+        <Grants path="/about" />
+        <About path="/about	" />
+        <Login path="/login" />
+        <Signup path="/signup" />
       </Router>
     </div>
 

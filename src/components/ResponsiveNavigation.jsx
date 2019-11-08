@@ -22,9 +22,11 @@ const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor
             </figure>
             { navLinks.map((link, index) => 
                 <li
+                    onClick={ () => setNavOpen(!navOpen) }
                     onMouseEnter={ () => setHoverIndex(index) }
                     onMouseLeave={ () => setHoverIndex(-1) }
                     style={{ background: hoverIndex === index ? ( hoverBackground || '#999' ) : '' }}
+                    className={ navOpen ? 'active' : '' }
                 >
                     <Link
                         to={ link.path }
