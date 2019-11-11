@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor, logo }) => {
 
@@ -7,6 +7,7 @@ const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor
     const [ navOpen, setNavOpen ] = useState(false); // used for taggling drawer slider
 
     return (
+
         <nav 
             className='responsive-toolbar'
             style={ { background } }  
@@ -22,7 +23,7 @@ const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor
             </figure>
             { navLinks.map((link, index) => 
                 <li
-                    
+                    key={index}
                     onMouseEnter={ () => setHoverIndex(index) }
                     onMouseLeave={ () => setHoverIndex(-1) }
                     style={{ background: hoverIndex === index ? ( hoverBackground || '#999' ) : '' }}
