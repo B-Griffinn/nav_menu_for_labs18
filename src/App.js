@@ -1,11 +1,12 @@
 import React from 'react';
 import { Router } from '@reach/router';
 
-import Home from './pages/Home';
-import Grants from './pages/Grants';
-import About from './pages/Grants';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Home from './components/pages/Home';
+import Grants from './components/pages/Grants';
+import About from './components/pages/Grants';
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+// import Logout from './pages/Logout';
 
 import ResponsiveNavigation from './components/ResponsiveNavigation';
 
@@ -18,12 +19,12 @@ function App() {
 	  	{
 			text: 'Home',
 			path: '/home',
-			icon: 'ion-ios-megaphone'
+			icon: 'ion-ios-home'
 		},
 		{
 			text: 'Grants',
 			path: '/grants',
-			icon: 'ion-ios-home'
+			icon: 'ion-ios-megaphone'
 		},
 		
 		{
@@ -34,13 +35,18 @@ function App() {
 		{
 			text: 'Login',
 			path: '/login',
-			icon: 'ion-ios-bonfire'
+			icon: 'ion-ios-log-in'
 		},
 		{
 			text: 'Signup',
 			path: '/signup',
-			icon: 'ion-ios-briefcase'
-		}
+			icon: 'ion-ios-person-add'
+		},
+		// {
+		// 	text: 'Logout',
+		// 	path: '/logout',
+		// 	icon: 'ion-ios-log-out'
+		// }
 	]
 
   return (
@@ -51,11 +57,12 @@ function App() {
 		logo={ logo }
       />
       <Router>
-		<Home path="/home" />
+		<Home exact path="/home" />
         <Grants path="/about" />
         <About path="/about	" />
         <Login path="/login" />
         <Signup path="/signup" />
+		{/* <Logout path="/" /> */}
       </Router>
     </div>
 

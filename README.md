@@ -8,6 +8,7 @@
 
 > ``` npm i ```
 > ``` npm i node-sass  ```
+> ``` npm i @reach/router ```
 
 - This is an ideal nav bar that we would like to provide our stake holder, Zak Slayback
 - The nav bar will have a few differences depending on the user

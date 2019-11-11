@@ -6,7 +6,8 @@ class Grants extends React.Component {
 
     return (
         <div>
-        Grants</div>
+          Grants is currently not being used.
+        </div>
     )
   }
 }
