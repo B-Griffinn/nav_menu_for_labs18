@@ -20,6 +20,7 @@ nav.responsive-toolbar {
             margin-inline-start: 2px;
             margin-inline-end: 0;
             cursor: pointer;
+            color: white;
         }
 
         li {
@@ -43,7 +44,7 @@ nav.responsive-toolbar {
     }
 }
 
-@media screen and (max-width: 759px) {
+@media screen and (max-width: 2100px) {
     nav.responsive-toolbar {
         display: flex;
         height: 100%;
@@ -56,6 +57,7 @@ nav.responsive-toolbar {
     position: fixed;
     left: 9px;
     top: 10px;
+    color: white;
 }        
     ul {
         margin-top: 60px;
@@ -65,6 +67,7 @@ nav.responsive-toolbar {
         width: 300px;
         left: -240px;
         position: fixed;
+        opacity: 0.9;
 
          &.active {
                 left: 0px;

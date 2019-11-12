@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import menuLogo from '../components/menu.svg';
+import closeMenu from '../components/close-menu.svg';
+
 const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor, logo }) => {
 
     const [ hoverIndex, setHoverIndex ] = useState(-1); // used for hover color
@@ -19,8 +22,13 @@ const ResponsiveNavigation = ({ navLinks, background, hoverBackground, linkColor
             <figure
                 onClick={ () => setNavOpen(!navOpen) }
             >
-                <img src={ logo }  height='40px' width='40px' alt="our logo"/>
+            {
+                !navOpen ? <img src={ menuLogo }  height='40px' width='40px' alt="our logo"/> : <img src={ closeMenu }  height='50px' width='40px' alt="our logo"/>
+            } 
+
+                
             </figure>
+
             { navLinks.map((link, index) => 
                 <li
                     key={index}
